@@ -9,4 +9,4 @@ Multi-biome PLSR model to estimate leaf mass per area using full-range (i.e. 400
 See table S1 in article supplimental materials
 
 ### Article citation:
-in press
+Serbin SP, Wu J, Ely KS, Kruger EL, Townsend PA, Meng R, Wolfe BT, Chlus A, Wang Z, Rogers A. 2019. From the Arctic to the tropics: multi-biome prediction of leaf mass per area using leaf reflectance. New Phytologist. DOI: 10.1111/nph.16123
