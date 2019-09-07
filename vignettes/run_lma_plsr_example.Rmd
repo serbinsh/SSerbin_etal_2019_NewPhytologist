@@ -5,6 +5,8 @@ date: '2019-09-07'
 output:
   pdf_document: default
   html_notebook: default
+  html_document:
+    df_print: paged
 ---
 
 # Overview
@@ -21,6 +23,7 @@ new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"
 if(length(new.packages)) install.packages(new.packages)
 ```
 
+
 ```{r}
 # load libraries needed for script
 library(readr)    # readr - read_csv function to pull data from EcoSIS
@@ -29,6 +32,8 @@ library(scales)   # alpha() - for applying a transparency to data points
 library(devtools)
 library(httr)
 ```
+
+
 ```{r}
 # define function to grab PLSR model from GitHub
 #devtools::source_gist("gist.github.com/christophergandrud/4466237")
@@ -43,6 +48,7 @@ source_GitHubData <-function(url, sep = ",", header = TRUE) {
 #--------------------------------------------------------------------------------------------------#
 ```
 
+
 ```{r setup, include=FALSE, echo=FALSE}
 #--------------------------------------------------------------------------------------------------#
 ### Set working directory (scratch space)
@@ -55,16 +61,17 @@ getwd()  # check wd
 #--------------------------------------------------------------------------------------------------#
 ```
 
+
 ```{r}
 #--------------------------------------------------------------------------------------------------#
 ### PLSR Coefficients - Grab from GitHub
+git_repo <- "https://raw.githubusercontent.com/serbinsh/SSerbin_etal_2019_NewPhytologist/master/"
 print("**** Downloading PLSR coefficients ****")
-githubURL <- "https://raw.githubusercontent.com/serbinsh/SSerbin_etal_2019_NewPhytologist/master/SSerbin_multibiome_lma_plsr_model/sqrt_LMA_gDW_m2_PLSR_Coefficients_10comp.csv"
+githubURL <- paste0(git_repo,"SSerbin_multibiome_lma_plsr_model/sqrt_LMA_gDW_m2_PLSR_Coefficients_10comp.csv")
 LeafLMA.plsr.coeffs <- source_GitHubData(githubURL)
 rm(githubURL)
-githubURL <- "https://raw.githubusercontent.com/serbinsh/SSerbin_etal_2019_NewPhytologist/master/SSerbin_multibiome_lma_plsr_model/sqrt_LMA_gDW_m2_Jackkife_PLSR_Coefficients.csv"
+githubURL <- paste0(git_repo,"SSerbin_multibiome_lma_plsr_model/sqrt_LMA_gDW_m2_Jackkife_PLSR_Coefficients.csv")
 LeafLMA.plsr.jk.coeffs <- source_GitHubData(githubURL)
-rm(githubURL)
 #--------------------------------------------------------------------------------------------------#
 ```
 
@@ -73,6 +80,7 @@ rm(githubURL)
 #### URL:  https://ecosis.org/#result/13aef0ce-dd6f-4b35-91d9-28932e506c41  (Lopex)
 #### URL:  https://ecosis.org/#result/2231d4f6-981e-4408-bf23-1b2b303f475e  (Angers)
 #--------------------------------------------------------------------------------------------------#
+
 ```{r}
 #--------------------------------------------------------------------------------------------------#
 ### Grab data
@@ -109,6 +117,7 @@ angers_dat_clean <- dat_raw[-remove,]
 rm(dat_raw)
 #--------------------------------------------------------------------------------------------------#
 ```
+
 
 ```{r}
 #--------------------------------------------------------------------------------------------------#
