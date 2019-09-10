@@ -7,7 +7,9 @@ Multi-biome PLSR model to estimate leaf mass per area using full-range (i.e. 400
 
 2) A vignette to show the results of running the example R script which applies the LMA PLSR model to the [Lopex93](https://ecosis.org/#result/13aef0ce-dd6f-4b35-91d9-28932e506c41) and [Angers](https://ecosis.org/#result/2231d4f6-981e-4408-bf23-1b2b303f475e) datasets. These datasets are availible on [EcoSIS](https://ecosis.org "EcoSIS") 
 
-3) The final LMA PLSR model coefficients 
+3) An example vignette showing the application of the LMA PLSR model to datasets collected across NEON domains in the eastern U.S. The NEON spectra and LMA data are availible on [EcoSIS](https://ecosis.org/#result/5617da17-c925-49fb-b395-45a51291bd2d "NEON Data").
+
+4) The final LMA PLSR model coefficients 
 
 
 ## Dataset citations and DOIs:
