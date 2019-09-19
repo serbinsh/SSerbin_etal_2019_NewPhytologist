@@ -13,7 +13,7 @@ Multi-biome PLSR model to estimate leaf mass per area using full-range (i.e. 400
 
 
 ## Dataset citations and DOIs:
-See table S1 in article supporting information
+See table [S1](https://github.com/serbinsh/SSerbin_etal_2019_NewPhytologist/blob/master/nph16123-sup-0001-FigS1-S11-TableS1.pdf) in article supporting information
 
 
 ### Article citation:
