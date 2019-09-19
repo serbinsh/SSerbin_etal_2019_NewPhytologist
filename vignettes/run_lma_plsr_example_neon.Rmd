@@ -1,7 +1,7 @@
 ---
 title: "Example application of multi-biome PLSR model to estimate LMA for NEON domains in the eastern U.S."
 author: "Shawn Serbin"
-date: '2019-09-10'
+date: '2019-09-19'
 output:
   pdf_document: default
   html_notebook: default
@@ -77,7 +77,7 @@ LeafLMA.plsr.jk.coeffs <- source_GitHubData(githubURL)
 
 #-------------------------------------------------------------------------#
 ### NEON dataset
-#### URL:  https://ecosis.org/#result/5617da17-c925-49fb-b395-45a51291bd2d
+#### URL:  https://ecosis.org/package/5617da17-c925-49fb-b395-45a51291bd2d
 #-------------------------------------------------------------------------#
 
 ```{r}
@@ -86,7 +86,7 @@ LeafLMA.plsr.jk.coeffs <- source_GitHubData(githubURL)
 print("**** Downloading Ecosis data ****")
 ecosis_id <- "5617da17-c925-49fb-b395-45a51291bd2d"
 ecosis_file <- sprintf(
-  "https://ecosis.org/package/export?package_id=%s&filters=&metadata=true",
+  "https://ecosis.org/api/package/%s/export?metadata=true",
   ecosis_id
 )
 

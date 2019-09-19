@@ -1,7 +1,7 @@
 ---
 title: "Example application of multi-biome LMA PLSR model"
 author: "Shawn Serbin"
-date: '2019-09-07'
+date: '2019-09-19'
 output:
   pdf_document: default
   html_notebook: default
@@ -77,8 +77,8 @@ LeafLMA.plsr.jk.coeffs <- source_GitHubData(githubURL)
 
 #--------------------------------------------------------------------------------------------------#
 ### Example datasets
-#### URL:  https://ecosis.org/#result/13aef0ce-dd6f-4b35-91d9-28932e506c41  (Lopex)
-#### URL:  https://ecosis.org/#result/2231d4f6-981e-4408-bf23-1b2b303f475e  (Angers)
+#### URL:  https://ecosis.org/package/13aef0ce-dd6f-4b35-91d9-28932e506c41  (Lopex)
+#### URL:  https://ecosis.org/package/2231d4f6-981e-4408-bf23-1b2b303f475e  (Angers)
 #--------------------------------------------------------------------------------------------------#
 
 ```{r}
@@ -87,7 +87,7 @@ LeafLMA.plsr.jk.coeffs <- source_GitHubData(githubURL)
 print("**** Downloading Ecosis data ****")
 ecosis_id <- "13aef0ce-dd6f-4b35-91d9-28932e506c41"  # lopex
 ecosis_file <- sprintf(
-  "https://ecosis.org/package/export?package_id=%s&filters=&metadata=true",
+  "https://ecosis.org/api/package/%s/export?metadata=true",
   ecosis_id
 )
 
@@ -102,9 +102,10 @@ lopex_dat_clean <- dat_raw[-remove,]
 
 ecosis_id <- "2231d4f6-981e-4408-bf23-1b2b303f475e"  # angers
 ecosis_file <- sprintf(
-  "https://ecosis.org/package/export?package_id=%s&filters=&metadata=true",
+  "https://ecosis.org/api/package/%s/export?metadata=true",
   ecosis_id
 )
+
 message("Downloading data...")
 dat_raw <- read_csv(ecosis_file)
 message("Download complete!")
