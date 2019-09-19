@@ -12,7 +12,7 @@
 #    * Code is provided under GNU General Public License v3.0 
 #
 #
-#    --- Last updated:  09.19.2019 By Shawn P. Serbin <sserbin@bnl.gov>
+#    --- Last updated:  09.06.2019 By Shawn P. Serbin <sserbin@bnl.gov>
 ####################################################################################################
 
 
@@ -69,9 +69,9 @@ rm(githubURL)
 #--------------------------------------------------------------------------------------------------#
 ### Example datasets
 # 
-# URL:  https://ecosis.org/package/13aef0ce-dd6f-4b35-91d9-28932e506c41  (Lopex)
+# URL:  https://ecosis.org/#result/13aef0ce-dd6f-4b35-91d9-28932e506c41  (Lopex)
 #
-# URL:  https://ecosis.org/package/2231d4f6-981e-4408-bf23-1b2b303f475e  (Angers)
+# URL:  https://ecosis.org/#result/2231d4f6-981e-4408-bf23-1b2b303f475e  (Angers)
 #
 #--------------------------------------------------------------------------------------------------#
 
@@ -81,7 +81,7 @@ rm(githubURL)
 print("**** Downloading Ecosis data ****")
 ecosis_id <- "13aef0ce-dd6f-4b35-91d9-28932e506c41"  # lopex
 ecosis_file <- sprintf(
-  "https://ecosis.org/api/package/%s/export?metadata=true",
+  "https://ecosis.org/package/export?package_id=%s&filters=&metadata=true",
   ecosis_id
 )
 
@@ -96,10 +96,9 @@ lopex_dat_clean <- dat_raw[-remove,]
 
 ecosis_id <- "2231d4f6-981e-4408-bf23-1b2b303f475e"  # angers
 ecosis_file <- sprintf(
-  "https://ecosis.org/api/package/%s/export?metadata=true",
+  "https://ecosis.org/package/export?package_id=%s&filters=&metadata=true",
   ecosis_id
 )
-
 message("Downloading data...")
 dat_raw <- read_csv(ecosis_file)
 message("Download complete!")
