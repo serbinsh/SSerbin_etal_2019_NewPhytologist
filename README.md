@@ -17,4 +17,4 @@ See table [S1](https://github.com/serbinsh/SSerbin_etal_2019_NewPhytologist/blob
 
 
 ### Article citation:
-Serbin SP, Wu J, Ely KS, Kruger EL, Townsend PA, Meng R, Wolfe BT, Chlus A, Wang Z, Rogers A. 2019. From the Arctic to the tropics: multi-biome prediction of leaf mass per area using leaf reflectance. New Phytologist. DOI: 10.1111/nph.16123
+Serbin, S.P., Wu, J., Ely, K.S., Kruger, E.L., Townsend, P.A., Meng, R., Wolfe, B.T., Chlus, A., Wang, Z. and Rogers, A. (2019), From the Arctic to the tropics: multibiome prediction of leaf mass per area using leaf reflectance. New Phytol, 224: 1557-1568. doi:10.1111/nph.16123. URL: https://nph.onlinelibrary.wiley.com/doi/full/10.1111/nph.16123
